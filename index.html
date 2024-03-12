@@ -122,47 +122,68 @@
     <section id="three" class="main style1 special">
       <div class="container">
         <header class="major">
-          <h2>Adipiscing amet consequat</h2>
+          <h2>Projects</h2>
         </header>
-        <p>Ante nunc accumsan et aclacus nascetur ac ante amet sapien sed.</p>
+        <p>The best way to learn is to build stuff, so I build.</p>
         <div class="row gtr-150">
           <div class="col-4 col-12-medium">
             <span class="image fit"
               ><img src="images/huddle.jpg" alt=""
             /></span>
-            <h3>Magna feugiat lorem</h3>
+            <h3>Huddle</h3>
             <p>
-              Adipiscing a commodo ante nunc magna lorem et interdum mi ante
-              nunc lobortis non amet vis sed volutpat et nascetur.
+              A community-building platform's landing page emphasizing user
+              engagement.
             </p>
             <ul class="actions special">
-              <li><a href="#" class="button">More</a></li>
+              <li>
+                <a
+                  href="https://brayheart.github.io/huddle-landing-page/"
+                  class="button"
+                  target="_blank"
+                  >More</a
+                >
+              </li>
             </ul>
           </div>
           <div class="col-4 col-12-medium">
             <span class="image fit"
               ><img src="images/speakers.jpg" alt=""
             /></span>
-            <h3>Magna feugiat lorem</h3>
+            <h3>Checkout Page</h3>
             <p>
-              Adipiscing a commodo ante nunc magna lorem et interdum mi ante
-              nunc lobortis non amet vis sed volutpat et nascetur.
+              Streamline your e-commerce transactions with a user-friendly
+              checkout process.
             </p>
             <ul class="actions special">
-              <li><a href="#" class="button">More</a></li>
+              <li>
+                <a
+                  href="https://brayheart.github.io/ecommerce-page/"
+                  class="button"
+                  target="_blank"
+                  >More</a
+                >
+              </li>
             </ul>
           </div>
           <div class="col-4 col-12-medium">
             <span class="image fit"
               ><img src="images/spruce.jpg" alt=""
             /></span>
-            <h3>Magna feugiat lorem</h3>
+            <h3>Spruce Booking</h3>
             <p>
-              Adipiscing a commodo ante nunc magna lorem et interdum mi ante
-              nunc lobortis non amet vis sed volutpat et nascetur.
+              A booking platform with dynamic table sorting, input validation,
+              and pagination.
             </p>
             <ul class="actions special">
-              <li><a href="#" class="button">More</a></li>
+              <li>
+                <a
+                  href="https://brayheart.github.io/Spruce-Client/"
+                  class="button"
+                  target="_blank"
+                  >More</a
+                >
+              </li>
             </ul>
           </div>
         </div>
@@ -170,16 +191,39 @@
     </section>
 
     <!-- Four -->
-    <section id="four" class="main style2 special">
-      <div class="container">
-        <header class="major">
-          <h2>Ipsum feugiat consequat?</h2>
-        </header>
-        <p>Sed lacus nascetur ac ante amet sapien.</p>
-        <ul class="actions special">
-          <li><a href="#" class="button wide primary">Sign Up</a></li>
-          <li><a href="#" class="button wide">Learn More</a></li>
-        </ul>
+    <section class="main style2 special">
+      <div class="contact-card">
+        <form
+          id="simple-contact-form"
+          action="/path-to-your-server-side-script"
+          method="post"
+        >
+          <div class="form-row">
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Your Name"
+              required
+              class="full-width"
+            />
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Your Email"
+              required
+              class="full-width"
+            />
+          </div>
+          <textarea
+            id="message"
+            name="message"
+            placeholder="Ask me about my research!"
+            required
+          ></textarea>
+          <button type="submit">SEND</button>
+        </form>
       </div>
     </section>
 
@@ -505,28 +549,19 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
     <section id="footer">
       <ul class="icons">
         <li>
-          <a href="#" class="icon brands alt fa-twitter"
-            ><span class="label">Twitter</span></a
-          >
-        </li>
-        <li>
-          <a href="#" class="icon brands alt fa-facebook-f"
-            ><span class="label">Facebook</span></a
-          >
-        </li>
-        <li>
-          <a href="#" class="icon brands alt fa-instagram"
-            ><span class="label">Instagram</span></a
-          >
-        </li>
-        <li>
-          <a href="#" class="icon brands alt fa-github"
+          <a
+            href="https://github.com/Brayheart"
+            class="icon brands alt fa-github"
+            target="_blank"
             ><span class="label">GitHub</span></a
           >
         </li>
         <li>
-          <a href="#" class="icon solid alt fa-envelope"
-            ><span class="label">Email</span></a
+          <a
+            href="https://www.linkedin.com/in/tyler-hoyt-bray/"
+            class="icon brands alt fa-linkedin"
+            target="_blank"
+            ><span class="label">Linkedin</span></a
           >
         </li>
       </ul>
@@ -539,5 +574,65 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
     <script src="assets/js/breakpoints.min.js"></script>
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
+    <style>
+      #simple-contact-form {
+        margin: 0px !important;
+      }
+      .contact-card input,
+      .contact-card textarea {
+        width: 100%;
+        padding: 15px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        background: #f9f9f9;
+        box-sizing: border-box; /* Add this line */
+      }
+      .contact-card {
+        background: #ffffff;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        font-family: Arial, sans-serif;
+        max-width: 600px;
+        margin: 50px auto;
+      }
+      .form-row {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px; /* Adjust the space between the two fields */
+        margin-bottom: 10px;
+      }
+      .contact-card input,
+      .contact-card textarea {
+        width: 100%;
+        padding: 15px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        background: #f9f9f9;
+      }
+      .contact-card .full-width {
+        flex: 1;
+      }
+      .contact-card button {
+        width: 100% !important;
+        padding: 15px !important;
+        border: none !important;
+        border-radius: 4px !important;
+        background-color: #007bff !important;
+        color: #ffffff !important;
+        font-size: 18px !important;
+        cursor: pointer !important;
+        margin-top: 25px !important;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        align-content: center;
+        justify-content: center;
+      }
+      .contact-card button:hover {
+        background-color: #0056b3 !important;
+      }
+    </style>
   </body>
 </html>
