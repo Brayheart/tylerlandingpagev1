@@ -331,5 +331,41 @@
         background-color: #0056b3 !important;
       }
     </style>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var form = document.getElementById("simple-contact-form");
+
+        form.addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          var formData = new FormData(form);
+
+          fetch(form.action, {
+            method: form.method,
+            body: formData,
+            headers: {
+              Accept: "application/json",
+            },
+          })
+            .then((response) => {
+              if (response.ok) {
+                console.log("here");
+                form.innerHTML =
+                  '<div style="text-align:center; margin-top:20px;">' +
+                  //   '<div class="icon solid alt fa-3x fa-check-circle"></div>'
+                  '<p style="color: green; font-size: 1.5em; font-weight: bold;">Message sent successfully!</p>' +
+                  "</div>";
+              } else {
+                form.innerHTML =
+                  '<p style="color: red;">There was a problem submitting your form. Please try again.</p>';
+              }
+            })
+            .catch((error) => {
+              form.innerHTML =
+                '<p style="color: red;">An error occurred while sending your message. Please try again.</p>';
+            });
+        });
+      });
+    </script>
   </body>
 </html>
