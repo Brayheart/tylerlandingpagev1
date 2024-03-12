@@ -196,9 +196,12 @@
         <h3 style="color: rgb(62, 56, 56)">Lets get in touch!</h3>
         <form
           id="simple-contact-form"
-          action="/path-to-your-server-side-script"
           method="post"
+          data-netlify="true"
+          name="contact"
         >
+          <input type="hidden" name="form-name" value="contact" />
+          <!-- Hidden field for Netlify -->
           <div class="form-row">
             <input
               type="text"
